@@ -225,6 +225,19 @@ Frontend:
 
         by this PROXY server wil get update
 
+        simple Terms:
+        ============
+
+        frontend - +page.svelte  -  fetch("/api/tasks"); - forwarded to backend and
+        vite.config.ts - server proxy - { 'api': //http:localhost:5000' } - forwarded /api calls to backend.
+
+
+        Backend CURD Routes:
+        ===================
+
+        First without database - (mongodb)
+
+
 
     
 
