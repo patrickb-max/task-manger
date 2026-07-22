@@ -84,4 +84,6 @@ Backend Implementation
         app.listen(5000, () => console.log("Task Service running on 5000"));
 
 
-        
+    run: 
+
+    node index.js
