@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	server: {
 		proxy: {
-			'/api': 'http://localhost:5000'   // forward /api calls to backend
+		 	'/api': 'http://localhost:5000'   // forward /api calls to backend
 		}
 	}
 			
