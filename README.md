@@ -171,3 +171,25 @@ Connection of Frontend and Backend
                               Using cors 
     frontend - (5173) ---------------------------> Backend - (5000)
                         frontend calls to backend
+
+
+
+Frontend: 
+
+    cd task-manager-frontend 
+    check - src > routes > +page.svelte
+
+    vi +page.svelte
+    <script>
+        let tasks = [];
+
+        // Loads fron backend
+        async function loadTasks() {
+            const res = await fetch ("http:localhost:5000/tasks");      //allows to fetch Backend side 
+            or 
+            const res = await fetch ("https://didactic-space-engine-q7wqj7759vrvf9464.github.dev/tasks");
+
+        }
+
+        loadTasks();
+        </script>
