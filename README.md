@@ -14,8 +14,11 @@ create a repository
     Task-manager - README.md file
 
 
-    Frontend Implemantation
-cmd: 
+Frontend Implemantation
+=======================
+    
+    cmd: 
+
     npx sv create task-manager-frontend
 
     It will creates  the task-manager-frontend directory with all the packages inside it like
@@ -49,3 +52,36 @@ cmd:
         Open Browser localhost: 5173 ----> Hit Enter ---> Page Opens.
 
 
+
+Backend Implementation
+======================
+
+    mkdir task-service && cd task-service
+
+    npm init -y
+    npm install express mongoose cors
+
+
+    Basic server: 
+        index.js
+
+        const express = require("express");
+        const mongoose = require("mongoose");
+        const app = express();
+
+        app.use(express.json());
+
+        // Root route for health check
+        app.get("/", (req, res) => {
+            res.send("Backend is alive!");
+        });
+
+        // Example route
+        app.get("/tasks", (req, res) => {
+            res.json([{ id: 1, title: "Learn Svelte" }]);
+        });
+
+        app.listen(5000, () => console.log("Task Service running on 5000"));
+
+
+        
