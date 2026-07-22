@@ -14,19 +14,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Individual Frontend code in src routes .svelte 
 // Display whats there in this file .
 //<h1>Welcome to SvelteKit</h1>
