@@ -159,5 +159,15 @@ Connection of Frontend and Backend
 
     app.listen(5000, () => console.log("Task Service running on 5000"));
 
-run: 
+    run: 
     npx nodemon index.js
+
+    output: 
+    Task Service running on 5000
+
+
+    We ensure that frontend ( Running on 5173 ) can call the backend ( Running on 5000 )
+
+                              Using cors 
+    frontend - (5173) ---------------------------> Backend - (5000)
+                        frontend calls to backend
