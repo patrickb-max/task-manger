@@ -103,4 +103,61 @@ Backend Implementation
 Connection of Frontend and Backend
 ==================================
 
+    cors - Cross origin resource sharing 
 
+        this will help for connecting the frontend and backend - basic way 
+
+    In index.js --- file add cors 
+
+    eg: const cors = require("cors");
+
+    app.use(cors());      // allow requests from frontend
+
+    file: index.js
+
+    // Individual backend File 
+    // Root level for health check
+    // Routing levels
+const express = require("express");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());      // allow requests from frontend
+app.use(express.json());
+
+// Root route for health check
+app.get("/", (req, res) => {
+  res.send("Backend is alive!");
+});
+
+// In-memory tasks list
+let tasks = [{ id: 1, title: "Learn Svelte", completed: false }];
+
+// CRUD routes
+app.get("/tasks", (req, res) => {
+  res.json(tasks);
+});
+
+app.post("/tasks", (req, res) => {
+  const newTask = { id: Date.now(), ...req.body };
+  tasks.push(newTask);
+  res.json(newTask);
+});
+
+app.put("/tasks/:id", (req, res) => {
+  const id = Number(req.params.id);
+  tasks = tasks.map(t => t.id === id ? { ...t, ...req.body } : t);
+  res.json(tasks.find(t => t.id === id));
+});
+
+app.delete("/tasks/:id", (req, res) => {
+  const id = Number(req.params.id);
+  tasks = tasks.filter(t => t.id !== id);
+  res.json({ message: "Task deleted" });
+});
+
+app.listen(5000, () => console.log("Task Service running on 5000"));
+
+run: 
+    npx nodemon index.js
