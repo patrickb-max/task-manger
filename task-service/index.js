@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.send("Backend is alive!");
 });
 
-//In -memory tasks list
+//In -memory tasks list without included data base 
 let tasks = [{ id: 1, title: "Learn Svelte", completed: false }];
 
 // CURD routes
