@@ -308,3 +308,10 @@ Create DATABASE - Mongodb Atlas:
     To upload properly need to install 
 
         npm install dotenv --- backend
+
+
+        check: 
+
+        check backend data get received 
+
+        check and examine the connected between frontend backend using cors
