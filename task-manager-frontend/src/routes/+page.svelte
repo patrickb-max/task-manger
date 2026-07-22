@@ -3,7 +3,8 @@
 
     // Load tasks from backend
     async function loadTasks() {
-        const res = await fetch("http://localhost:5000/tasks");
+        //const res = await fetch("http://localhost:5000/tasks");
+        const res = await fetch("https://didactic-space-engine-q7wqj7759vrvf9464-5175.app.github.dev/tasks")
         tasks = await res.json();
     }
 
