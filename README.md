@@ -305,5 +305,6 @@ Create DATABASE - Mongodb Atlas:
 
 
 
-    
+    To upload properly need to install 
 
+        npm install dotenv --- backend
