@@ -218,4 +218,13 @@ Frontend:
 			
     });
 
+    Therefore this says Vite: 
+        Whenever frontend calls /api/... , forwarded to it your backend running on port 5000.
+
+        also change the +page.svelte as import {onMount} from 'svelte'; --some changes to file: +page.svelte
+
+        by this PROXY server wil get update
+
+
+    
 
