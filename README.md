@@ -272,6 +272,18 @@ Frontend:
      it is temporary stores in RAM because we didnt connected to database(mongodb)
 
 
+advance:
+
+    add buttons in svelte component 
+    src > routes > +page.svelte - <script> ------</script>
+
+    npm run dev
+
+    localhost:5173 - browse it
+
+    
+
+
 
     
 
