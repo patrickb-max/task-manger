@@ -86,4 +86,12 @@ Backend Implementation
 
     run: 
 
-    node index.js
+        node index.js
+    
+    Therefore running this command will get an output of localhost://5000 or else Task service running on 5000
+
+    Open browser check localhost:5000 
+
+        as per index.js - need to get as " Backend is alive " on browser
+        
+
