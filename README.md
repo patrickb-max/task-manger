@@ -95,9 +95,9 @@ Backend Implementation
         as per index.js - need to get as " Backend is alive " on browser
 
 
-Above concepts are completely basic and related to frontend and backend hosting indvidually.
+    Above concepts are completely basic and related to frontend and backend hosting indvidually.
 
-=================================================================================
+============================================================================
 
 
 Connection of Frontend and Backend
